@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+<head>
+
+<meta charset="utf-8">
+
+<title>Интересный эффект при прокрутке страницы на CSS3</title>
+<link href='http://fonts.googleapis.com/css?family=Ovo' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="stylesheets/screen.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<script>
+$(document).ready(function(){
+  $( 'a[href^=#]' ).click( function () {
+    var id = $( this ).attr( 'href' ).match( /#.+$/ )[0].substr(1);
+    var offsetTop = $("a[name='"+ id + "']").offset().top;
+    $('body,html').animate({scrollTop:offsetTop}, 900);
+    return false;
+  });
+});
+</script>
+
+</head>
+ 
+<body>
+<header class=" content">
+	<div class="wrapper">
+	<h1>С любовью к лаванде</h1>
+	<p><span>Лаванда</span>  (лат. Lavandula) — род растений семейства яснотковых (Lamiaceae или Labiatae). Включает примерно 25-30 видов. Произрастает на Канарских островах, в северной и восточной Африке, на юге Европы, в Аравии и в Индии. Культурные формы выращиваются в садах во всём мире.</p> 
+	
+	</div>
+</header>
+
+<section class="content" id="oil">
+	<div class="wrapper">
+	<p><span>Масло лаванды</span> лаванда принадлежит к семейству губоцветных.</p>
+	<p>Для лечебных и косметических целей собирают цветочки лаванды. Они содержат вяжущие вещества, минеральные соли, летучие масла, октан линаллола, провалериановую и масляную кислоты.</p>
+	</div>
+
+</section>
+<section class="content " id="culinary">
+	<div class="wrapper">
+	<p><span>Лаванда в кулинарии</span> Это растение на сегодняшний день весьма широко используется в кулинарии. Во многих европейских странах оно используется в качестве приправы для приготовления различных салатов, соусов, супов и вторых блюд.</p>
+	</div>
+</section>
+<section class="content " id="dried">
+	<div class="wrapper">
+	<p><span>Сушеные цветы лаванды</span>Цветы лаванды отваривают и пьют отвары как успокаивающее средство. Кроме того, они снимают боли при многих заболеваниях.</p>
+	<p>В качестве пряности используют листья лаванды или веточки с листьями и цветками. Растение обладает довольно сильным запахом и приятно-терпким вкусом.
+
+Лаванда оказывает благоприятное действие при гриппе. В сухом виде в смеси с некоторыми травами (майоран, лепестки роз и др.) входит в составы оздоровительных чаев. </p>
+	</div>
+</section>
+<footer>
+ 	<div class=wrapper>
+		 "С любовью к лаванде" был разработан для учебных целей
+	</div>
+</footer>
+</body>
+</html>

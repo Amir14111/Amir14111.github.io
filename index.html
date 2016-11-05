@@ -1,46 +1,24 @@
----
----
+
+
+
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title>Amigo's page</title>
-    <link rel="stylesheet" href="/css/skeleton.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" type="text/css" href="css/global.css" />
-    <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script src="{{ site.url }}/js/jquery-2.1.1.min.js"></script>
+    <title>yes</title>
+  
+
   </head>
   <body>
-    <div class="container">
-      <div class="sixteen columns">
-        <h1>My blog</h1>
-        <hr style="border: 0.1em solid black; margin: 1em 0 3em 0;" />
-      </div>
-      <div class="twelve columns offset-by-two">
-        <ul class="post-list">
-            {% for post in site.posts %}
-            <li>
-              <a href="{{ post.url }}">
-                <div style="text-align: right; width: 100%; font-size: 90%; font-style: italic">
-                  {% assign d = post.date | date: "%-d"  %}
-                  {{ post.date | date: "%B" }} 
-                  {% case d %}
-                    {% when '1' or '21' or '31' %}{{ d }}st
-                    {% when '2' or '22' %}{{ d }}nd
-                    {% when '3' or '23' %}{{ d }}rd
-                    {% else %}{{ d }}th
-                  {% endcase %},
-                  {{ post.date | date: "%Y" }}
-                </div>
-                <h4 ><u>{{ post.title }}</u></h4>
-                {{ post.excerpt }}
-                </a>
-            </li>
-            <hr />
-            {% endfor %}
-        </ul>
-      </div>
-    </div>
+
+$$
+\frac{\partial E}{\partial w_{n,m}^{l}\left(x,\, y\right)} = \sum_{x',y'} o_{n}^{l-1}\left( x'-x,\, y' - y \right) \cdot \delta_{m}^{l}\left(x',\, y' \right)
+$$
+
+
+
+$$
+\delta_{m}^{l}\left(x,\: y\right)=\frac{\partial E}{\partial c_{m}^{l}\left(x,\, y\right)}=\sum_{o}\sum_{\, x',\, y'}^{N_{w},N_{w}}\underbrace{\frac{\partial E}{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}}_{\delta_{o}^{l+1}\left(x+x',\, y+y'\right)}\cdot\frac{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}{\partial c_{m}^{l}\left(x,\, y\right)}
+$$
+
   </body>
 </html>

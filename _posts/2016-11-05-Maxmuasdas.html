@@ -2,6 +2,11 @@
 layout: post
 title: Convolutional Neural Network's Backpropagation
 ---
+Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
+I got very confused when trying to implement a CNN. In the end I wanted to 
+fully understand the math to understand how to get a working implementation.
+*Isn't this just backpropagation as usual?*
+Well, basically yes, but a bit more complex and with some pitfalls, so read on.
 
 
 <!DOCTYPE HTML>
@@ -26,22 +31,10 @@ MathJax.Hub.Config({
 <body>
 
 
-Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
-I got very confused when trying to implement a CNN. In the end I wanted to 
-fully understand the math to understand how to get a working implementation.
-*Isn't this just backpropagation as usual?*
-Well, basically yes, but a bit more complex and with some pitfalls, so read on.
-
-
 $$
 \frac{\partial E}{\partial w_{n,m}^{l}\left(x,\, y\right)} = \sum_{x',y'} o_{n}^{l-1}\left( x'-x,\, y' - y \right) \cdot \delta_{m}^{l}\left(x',\, y' \right)
 $$
 
-Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
-I got very confused when trying to implement a CNN. In the end I wanted to 
-fully understand the math to understand how to get a working implementation.
-*Isn't this just backpropagation as usual?*
-Well, basically yes, but a bit more complex and with some pitfalls, so read on.
 
 
 $$
@@ -80,10 +73,6 @@ $$
 $$
 
 Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
-I got very confused when trying to implement a CNN. In the end I wanted to 
-fully understand the math to understand how to get a working implementation.
-*Isn't this just backpropagation as usual?*
-Well, basically yes, but a bit more complex and with some pitfalls, so read on.
 
 
 $$

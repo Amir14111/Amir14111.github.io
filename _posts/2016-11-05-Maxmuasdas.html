@@ -20,11 +20,10 @@ MathJax.Hub.Config({
 });
 </script> 
 
-    <title>yes</title>
-  
+<title>yes</title>
 
-  </head>
-  <body>
+</head>
+<body>
 
 
 Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
@@ -38,6 +37,22 @@ $$
 \frac{\partial E}{\partial w_{n,m}^{l}\left(x,\, y\right)} = \sum_{x',y'} o_{n}^{l-1}\left( x'-x,\, y' - y \right) \cdot \delta_{m}^{l}\left(x',\, y' \right)
 $$
 
+Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
+I got very confused when trying to implement a CNN. In the end I wanted to 
+fully understand the math to understand how to get a working implementation.
+*Isn't this just backpropagation as usual?*
+Well, basically yes, but a bit more complex and with some pitfalls, so read on.
+
+
+$$
+\delta_{m}^{l}\left(x,\: y\right)=\frac{\partial E}{\partial c_{m}^{l}\left(x,\, y\right)}=\sum_{o}\sum_{\, x',\, y'}^{N_{w},N_{w}}\underbrace{\frac{\partial E}{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}}_{\delta_{o}^{l+1}\left(x+x',\, y+y'\right)}\cdot\frac{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}{\partial c_{m}^{l}\left(x,\, y\right)}
+$$
+
+Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
+I got very confused when trying to implement a CNN. In the end I wanted to 
+fully understand the math to understand how to get a working implementation.
+*Isn't this just backpropagation as usual?*
+Well, basically yes, but a bit more complex and with some pitfalls, so read on.
 
 
 $$
@@ -45,9 +60,13 @@ $$
 $$
 
 
-$$
-\delta_{m}^{l}\left(x,\: y\right)=\frac{\partial E}{\partial c_{m}^{l}\left(x,\, y\right)}=\sum_{o}\sum_{\, x',\, y'}^{N_{w},N_{w}}\underbrace{\frac{\partial E}{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}}_{\delta_{o}^{l+1}\left(x+x',\, y+y'\right)}\cdot\frac{\partial c_{o}^{l+1}\left(x+x',\, y+y'\right)}{\partial c_{m}^{l}\left(x,\, y\right)}
-$$
+Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
+I got very confused when trying to implement a CNN. In the end I wanted to 
+fully understand the math to understand how to get a working implementation.
+*Isn't this just backpropagation as usual?*
+Well, basically yes, but a bit more complex and with some pitfalls, so read on.
+
+
 
 $$
 \begin{aligned}
@@ -60,8 +79,16 @@ $$
 \end{aligned}
 $$
 
+Although I knew how to implement an "normal" flat Multilayer Perceptron (MLP), 
+I got very confused when trying to implement a CNN. In the end I wanted to 
+fully understand the math to understand how to get a working implementation.
+*Isn't this just backpropagation as usual?*
+Well, basically yes, but a bit more complex and with some pitfalls, so read on.
+
+
 $$
 \delta_{m}^{l}\left(x,\: y\right)=\underbrace{\sum_{o}\sum_{\, x',\, y'}^{N_{w},N_{w}}\delta_{o}^{l+1}\left(x+x',\, y+y'\right)\cdot w_{m,o}^{l+1}\left(x',\, y'\right)}_{\text{Cross-Correlation, Backpropagated Error}}\cdot\frac{\partial a\left(c_{m}^{l}\left(x,\, y\right)\right)}{\partial c_{m}^{l}\left(x,\, y\right)}
 $$
-  </body>
+
+</body>
 </html>
